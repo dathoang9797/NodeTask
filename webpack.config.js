@@ -2,14 +2,14 @@ const path = require('path');
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 const NodemonPlugin = require('nodemon-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
+const Dotenv = require('dotenv-webpack');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const webpack = require('webpack');
 const prod = process.argv[3];
-const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   target: 'node',
-  entry: './src/server.ts',
+  entry: './src/server_buoi7.ts',
   externalsPresets: { node: true },
   externals: [nodeExternals()],
   mode: prod ? 'production' : 'development',
@@ -37,8 +37,9 @@ module.exports = {
     new NodePolyfillPlugin(),
     new NodemonPlugin({
       // Extensions to watch.
-      ext: 'ts,js,njk,json',
+      ext: 'ts,js,json',
+      verbose: true,
     }),
-    new Dotenv()
+    new Dotenv(),
   ],
 };
