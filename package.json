@@ -30,6 +30,7 @@
     "lodash": "^4.17.21",
     "mongoose": "^6.3.3",
     "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
     "nanoid": "^3.3.4",
     "ndb": "^1.1.5",
     "node-polyfill-webpack-plugin": "^1.1.4",
@@ -38,6 +39,8 @@
     "passport": "^0.6.0",
     "passport-jwt": "^4.0.0",
     "request": "^2.79.0",
+    "sequelize": "^6.21.0",
+    "sequelize-auto": "^0.8.8",
     "serve": "^13.0.2",
     "ts-loader": "^9.3.0",
     "ts-node": "^10.8.1",
@@ -51,7 +54,8 @@
   },
   "scripts": {
     "dev": "npm run && webpack --watch",
-    "build:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run clean && npm run && webpack --mode production",
+    "dev:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install  && npm run && webpack --watch",
+    "build:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install  && npm run && webpack --mode production",
     "build": "npm run && webpack --mode production",
     "start": "serve -s dist",
     "debug": "ndb ts-node src/server.ts"
