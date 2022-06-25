@@ -9,6 +9,7 @@
       "@Models/*": ["src/Models/*"],
       "@Routers/*": ["src/Routers/*"],
       "@Helpers/*": ["src/Helpers/*"],
+      "@Data/*": ["src/Data/*"],
       /* ============================== */
       "@Configs": ["src/Configs"],
       "@Controllers": ["src/Controllers"],
@@ -16,7 +17,8 @@
       "@Migrations": ["src/Migrations"],
       "@Models": ["src/Models"],
       "@Routers": ["src/Routers"],
-      "@Helpers": ["src/Helpers"]
+      "@Helpers": ["src/Helpers"],
+      "@Data": ["src/Data"],
     }
   }
 }
