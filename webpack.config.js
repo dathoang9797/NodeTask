@@ -9,7 +9,7 @@ const prod = process.argv[3];
 
 module.exports = {
   target: 'node',
-  entry: './src/server_buoi7.ts',
+  entry: './src/server.ts',
   externalsPresets: { node: true },
   externals: [nodeExternals()],
   mode: prod ? 'production' : 'development',
