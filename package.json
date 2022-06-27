@@ -55,7 +55,7 @@
   "scripts": {
     "dev": "npm run && webpack --watch",
     "dev:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install  && npm run && webpack --watch",
-    "build:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install  && npm run && webpack --mode production",
+    "build:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run && webpack --mode production",
     "build": "npm run && webpack --mode production",
     "start": "serve -s dist",
     "debug": "ndb ts-node src/server.ts"
