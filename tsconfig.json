@@ -1,8 +1,8 @@
 {
   "extends": "./tsconfig.path.json",
   "compilerOptions": {
-    "target": "ES6",
-    "module": "commonjs",
+    "target": "ESNext",
+    "module": "NodeNext",
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
