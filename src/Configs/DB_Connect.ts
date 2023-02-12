@@ -1,5 +1,5 @@
 import mongoose, { MongooseError } from 'mongoose';
-
+mongoose.set("strictQuery", false);
 mongoose
   .connect(process.env.URL_DATABASE)
   .then(() => {

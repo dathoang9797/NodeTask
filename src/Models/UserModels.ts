@@ -1,18 +1,43 @@
 import { User } from '@Core/Models/User';
-import mongoose, { mongo } from 'mongoose';
+import mongoose from 'mongoose';
+import validator from 'validator';
 
 export const UserSchema = new mongoose.Schema<User>({
-  email: { type: String, require: true },
-  password: { type: String, require: true },
-  fullName: { type: String, require: true },
-  userType: { type: String, require: true },
-  phone: { type: String, require: true },
-  dateOfBird: { type: Date, require: true },
-  registerDay: { type: Date, default: new Date() },
-  numberOfKms: { type: Number, default: 0 },
-  numberOfTrips: { type: Number, default: 0 },
-  avatar: { type: String },
-  isActive: { type: Boolean, default: true },
+  name: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  email: {
+    type: String,
+    required: true,
+    trim: true,
+    lowercase: true,
+    validate(value: string) {
+      if (!validator.isEmail(value))
+        throw new Error('Email is invalid');
+    }
+  },
+  age: {
+    type: Number,
+    default: 0,
+    validate(value: number) {
+      if (value < 0) {
+        throw new Error('Age must be a positive number');
+      }
+    }
+  }
 });
 
 export const UserModel = mongoose.model('User', UserSchema);
+
+
+const me = new UserModel({
+  name: 'Dat',
+  age: 12,
+  email: 'dathoang9797gmsdail.com'
+})
+
+me.save().then((result) => {
+  console.log({ result })
+}).catch(console.log)
