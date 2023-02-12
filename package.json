@@ -56,9 +56,8 @@
     "dev": "npm run && webpack --watch",
     "dev:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install  && npm run && webpack --watch",
     "build:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run && webpack --mode production",
-    "build": "npm run && webpack --mode production",
+    "build": "npm run && webpack --mode production && node build/bundle.js",
     "start": "npm run build && node build/bundle.js",
-    "vercel-build": "npm start",
     "debug": "ndb ts-node src/server.ts"
   },
   "author": "dat",
