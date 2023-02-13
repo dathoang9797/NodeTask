@@ -1,5 +1,4 @@
 const path = require('path');
-const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 const NodemonPlugin = require('nodemon-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 const Dotenv = require('dotenv-webpack');
@@ -34,12 +33,12 @@ module.exports = {
     minimize: true, // enabling this reduces file size and readability
   },
   plugins: [
-    new NodePolyfillPlugin(),
-    new NodemonPlugin({
+    new Dotenv(),
+  ].concat(prod
+    ? []
+    : [new NodemonPlugin({
       // Extensions to watch.
       ext: 'ts,js,json',
       verbose: true,
-    }),
-    new Dotenv(),
-  ],
+    }),]),
 };
