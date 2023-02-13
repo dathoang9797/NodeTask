@@ -8,7 +8,7 @@ export const routerUser = express.Router();
 
 routerUser.get('/', (req: Request, res: Response) => {
   res.status(200).json({
-    message: 'Welcome to Hoang Quy Dat',
+    message: 'Welcome to Hoang Quy Dat 1997',
   });
 });
 
