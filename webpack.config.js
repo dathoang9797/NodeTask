@@ -3,6 +3,7 @@ const NodemonPlugin = require('nodemon-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 const Dotenv = require('dotenv-webpack');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const webpack = require('webpack');
 const prod = process.argv[3];
 
@@ -31,6 +32,10 @@ module.exports = {
   },
   optimization: {
     minimize: true, // enabling this reduces file size and readability
+    minimizer: [new TerserPlugin({
+      extractComments: false,
+    })],
+    
   },
   plugins: [
     new Dotenv(),
