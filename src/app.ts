@@ -1,9 +1,9 @@
 import express from 'express';
 import morgan from 'morgan';
-import { routerUser } from '@Routers/UserRouter';
+import routerUser from '@Routers/UserRouter';
+import routerTask from '@Routers/TaskRouter';
+import { UserModel } from '@Models/UserModels';
 import './Configs/DB_Connect';
-import './Models/TaskModels';
-import './Models/UserModels';
 
 const app = express();
 
@@ -12,5 +12,6 @@ if (process.env.NODE_ENV === 'development')
 
 app.use(express.json());
 app.use(routerUser);
+app.use(routerTask);
 
 export default app;

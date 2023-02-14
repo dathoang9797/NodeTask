@@ -1,20 +1,24 @@
-import { Task } from '@Core/Models/Task';
-import mongoose from 'mongoose';
+import { ITaskDocument } from '@Core/Models/Task';
+import {Schema,model} from 'mongoose';
 
-export const TaskSchema = new mongoose.Schema<Task>({
-    description: { type: String },
-    completed: { type: Boolean },
+const TaskSchema = new Schema<ITaskDocument>({
+    description: {
+        type: String,
+        required: true
+    },
+    completed: {
+        type: Boolean,
+        default: false
+    },
+    owner: {
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref: "User"
+    }
+},
+    {
+        timestamps: true //Automatically adds created/updated
+    }
+);
 
-});
-
-export const TaskModel = mongoose.model('Task', TaskSchema);
-
-
-const task = new TaskModel({
-    description: 'Learn mongoose',
-    completed: true
-})
-
-task.save().then((result) => {
-    console.log({ result })
-}).catch(console.log)
+export const TaskModel = model('Task', TaskSchema);
