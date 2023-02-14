@@ -1,5 +1,5 @@
-import { ITaskDocument } from '@Core/Models/Task';
-import {Schema,model} from 'mongoose';
+import { ITaskDocument } from '@App/Core/Models/Task';
+import { Schema, model } from 'mongoose';
 
 const TaskSchema = new Schema<ITaskDocument>({
     description: {

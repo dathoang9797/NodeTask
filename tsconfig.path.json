@@ -2,23 +2,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@Configs/*": ["src/Configs/*"],
-      "@Controllers/*": ["src/Controllers/*"],
-      "@Core/*": ["src/Core/*"],
-      "@Migrations/*": ["src/Migrations/*"],
-      "@Models/*": ["src/Models/*"],
-      "@Routers/*": ["src/Routers/*"],
-      "@Helpers/*": ["src/Helpers/*"],
-      "@Data/*": ["src/Data/*"],
-      /* ============================== */
-      "@Configs": ["src/Configs"],
-      "@Controllers": ["src/Controllers"],
-      "@Core": ["src/Core"],
-      "@Migrations": ["src/Migrations"],
-      "@Models": ["src/Models"],
-      "@Routers": ["src/Routers"],
-      "@Helpers": ["src/Helpers"],
-      "@Data": ["src/Data"],
+      "@App/*": ["src/*"],
+      "@App": ["src"],
     }
   }
 }

@@ -1,7 +1,7 @@
-import { Schema, model, SchemaDefinition } from 'mongoose';
+import { Schema, model } from 'mongoose';
 import jwt from 'jsonwebtoken';
 import bcrypt from "bcrypt";
-import { IUser, IUserDocument, IUserModal } from '@Core/Models/User';
+import { IUserDocument, IUserModal } from '@App/Core/Models/User';
 import { TaskModel } from './TaskModels';
 import validator from 'validator';
 
@@ -41,8 +41,7 @@ const UserSchema = new Schema<IUserDocument, IUserModal>({
       }
     }
   },
-  tokens: [
-    { token: String, required: true }
+  tokens: [{ token: { type: String } }
   ],
   avatar: {
     type: Buffer

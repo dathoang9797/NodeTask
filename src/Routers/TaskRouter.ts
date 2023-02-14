@@ -1,13 +1,16 @@
-
-import express, { Request, Response } from 'express';
-import { TaskModel } from '@Models/TaskModels';
+import express from 'express';
+import { auth } from '@App/Middleware/Auth';
+import { createTask, getTask, getTaskById } from '@App/Controllers/TaskController';
 
 const routerTask = express.Router();
 
-routerTask.get('/', (req: Request, res: Response) => {
-    res.status(200).json({
-        message: 'Welcome to Hoang Quy Dat 1997',
-    });
-});
+routerTask.post("/tasks", auth, createTask);
+
+// GET /tasks?completed=true  query
+// GET /taks?limit=10&skip=0  pagination
+// GET /tasks?sortBy=createdAt:desc
+routerTask.get("/tasks", auth, getTask);
+
+routerTask.get("/tasks/:id", auth, getTaskById);
 
 export default routerTask;
