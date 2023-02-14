@@ -15,11 +15,12 @@ export interface IUserDocument extends IUser, Document {
 }
 
 export interface IUserModal extends Model<IUserDocument> {
-  findByCredentials(email: string, password: string): IUserDocument,
+  findByCredentials(email: string, password: string): Promise<IUserDocument>
 }
 
 export interface IReqUser extends Request {
   token: string,
+  user: {} & IUserDocument
 }
 
 export interface IResUser extends Response {
