@@ -1,8 +1,9 @@
 {
-  "name": "Node-App",
+  "name": "nodeapp",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/bundle.js",
+  "main": "build/index.js",
+  "types": "./build/**/*.d.ts",
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
     "@types/express": "^4.17.13",

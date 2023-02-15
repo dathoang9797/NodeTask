@@ -9,14 +9,14 @@ const prod = process.argv[3];
 
 module.exports = {
   target: 'node',
-  entry: './src/server.ts',
+  entry: './src/index.ts',
   externalsPresets: { node: true },
   externals: [nodeExternals()],
   mode: prod ? 'production' : 'development',
-  devtool: false,
+  devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js',
+    filename: 'index.js',
   },
   module: {
     rules: [
