@@ -1,6 +1,6 @@
 {
   "name": "dathoang29101997",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -61,7 +61,7 @@
     "dev:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install  && npm run && webpack --watch",
     "build:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run && webpack --mode production",
     "build": "npm run && webpack --mode production",
-    "start": "node build/bundle.js",
+    "start": "node lib/index.js",
     "debug": "ndb ts-node src/server.ts",
     "test": "env-cmd -f .env jest --watch"
   },
