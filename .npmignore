@@ -1,0 +1,13 @@
+node_modules/
+src/
+
+.env
+.eslintignore
+.eslintrc
+.prettierrc
+.gitignore
+.prettierrc
+tsconfig.json
+tsconfig.path.json
+vercel.json
+webpack.config.js
