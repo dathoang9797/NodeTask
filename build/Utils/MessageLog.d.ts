@@ -1,0 +1,22 @@
+import { ErrorCastError } from '@App/Controllers/ErrorController';
+export declare const MessageLog: {
+    errorSignUp: string;
+    errorCreateUser: string;
+    messageSubjectEmailResetPassword: string;
+    messageTokenSentToEmail: string;
+    errorFetchUsers: string;
+    errorDeleteUser: string;
+    errorUpdateProfile: string;
+    errorUpdateUser: string;
+    errorCreateTask: string;
+    errorFetchTasks: string;
+    errorDeleteTask: string;
+    errorUpdateTask: string;
+    errorSomeThingWrong: string;
+    errorInvalidToken: string;
+    errorTokenExpired: string;
+    errorDuplicate: (value: RegExpMatchArray) => string;
+    errorCastMongoose: (err: ErrorCastError) => string;
+    errorValidation: (errors: string[]) => string;
+    messageForgotPassword: (resetUrl: string) => string;
+};
