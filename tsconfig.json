@@ -9,7 +9,7 @@
     "sourceMap": true,
     "declaration": true,
     "moduleResolution": "node",
-    "outDir": "./build/types",
+    "outDir": "./build",
     "allowJs": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
