@@ -1,9 +1,9 @@
 {
-  "name": "nodeapp",
+  "name": "dathoang29101997",
   "version": "1.0.0",
   "description": "",
   "main": "build/index.js",
-  "types": "build/types/**/*.d.ts",
+  "types": ["build/types/*.d.ts","build/types/**/*.d.ts"],
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
     "@types/express": "^4.17.13",
@@ -65,7 +65,7 @@
     "debug": "ndb ts-node src/server.ts",
     "test": "env-cmd -f .env jest --watch"
   },
-  "author": "dat",
+  "author": "dathoang9797",
   "license": "ISC",
   "dependencies": {
     "@sendgrid/mail": "^7.7.0"
