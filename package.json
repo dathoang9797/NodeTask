@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "build/index.js",
-  "types": "./build/**/*.d.ts",
+  "types": "build/**/*.d.ts",
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
     "@types/express": "^4.17.13",
