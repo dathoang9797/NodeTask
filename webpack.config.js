@@ -15,7 +15,7 @@ module.exports = {
   mode: prod ? 'production' : 'development',
   devtool: prod ?  'source-map' : 'cheap-module-source-map',
   output: {
-    path: path.resolve(__dirname, './'),
+    path: path.resolve(__dirname, 'lib'),
     filename: 'index.js',
   },
   module: {
