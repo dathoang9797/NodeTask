@@ -2,8 +2,8 @@ import express from 'express';
 import morgan from 'morgan';
 import routerUser from '@App/Routers/UserRouter';
 import routerTask from '@App/Routers/TaskRouter';
-import { ErrorController } from './Controllers/ErrorController';
-import './Configs/DB_Connect';
+import { ErrorController } from '@App/Controllers/ErrorController';
+import '@App/Configs/DB_Connect';
 
 const app = express();
 

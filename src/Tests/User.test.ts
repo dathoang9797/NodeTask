@@ -1,7 +1,7 @@
 import request from 'supertest';
 import mongoose from 'mongoose';
 import jwt from 'jsonwebtoken';
-import app from '@App/app';
+import app from '@App/App/app';
 import { UserModel } from '@App/Models/UserModels';
 
 const userOneId = new mongoose.Types.ObjectId();

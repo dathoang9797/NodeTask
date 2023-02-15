@@ -1,4 +1,4 @@
-import {add,calculateTip} from '@App/math'
+import {add,calculateTip} from '@App/App/math'
 
 test("Should calculate total tip", () => {
   const total = calculateTip(10, 0.3);
