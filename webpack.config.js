@@ -13,7 +13,7 @@ module.exports = {
   externalsPresets: { node: true },
   externals: [nodeExternals()],
   mode: prod ? 'production' : 'development',
-  devtool: 'source-map',
+  devtool: prod ?  'source-map' : 'cheap-module-source-map',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'index.js',
