@@ -66,7 +66,7 @@
     "build:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run && webpack --mode production",
     "build": "npm run && webpack --mode production",
     "start": "node lib/index.js",
-    "debug": "ndb ts-node src/server.ts",
+    "debug": "ndb ts-node src/index.ts",
     "test": "env-cmd -f .env jest --watch"
   },
   "author": "dathoang9797",
