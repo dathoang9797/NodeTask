@@ -4,6 +4,10 @@
   "description": "",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
+  "files": [
+    "src",
+    "lib"
+  ],
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
     "@types/express": "^4.17.13",
