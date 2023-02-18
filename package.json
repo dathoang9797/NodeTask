@@ -1,13 +1,12 @@
 {
   "name": "dathoang29101997",
-  "version": "1.0.22",
+  "version": "1.0.25",
   "description": "",
   "main": "./lib/index.js",
-  "types": "./lib/types/**/*.d.ts",
+  "types": "./lib/index.d.ts",
   "files": [
     "src",
-    "lib",
-    "lib/types/**/*"
+    "lib"
   ],
   "dependencies": {
     "bcrypt": "^5.1.0",
